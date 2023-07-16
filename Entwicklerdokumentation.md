@@ -91,7 +91,7 @@ Um das Triviosa-Spielprojekt zu entwickeln und auszuführen, sind folgende Kompo
 
 Folgen Sie den unten aufgeführten Schritten, um die Entwicklungsumgebung für das Spielprojekt einzurichten:
 
-1. Klone oder lade das Projekt herunter:
+1. Klone das Projekt:
    - Verwende den Befehl `git clone <Repository-URL>`, um das Projekt zu klonen.
     - Hier muss darauf geachtet werden, jeweils das Repository fürs Frontend ("frontend-project") und fürs Backend ("backend-projet") zu klonen.
 
@@ -100,86 +100,14 @@ Folgen Sie den unten aufgeführten Schritten, um die Entwicklungsumgebung für d
    - Führe den Befehl `npm install` aus, um die erforderlichen Abhängigkeiten für das Backend und das Frontend zu installieren.
 
 3. Konfiguration der Umgebungsvariablen (DIESE SEKTION KANN VORERST ÜBERSPRUNGEN WERDERN):
-   - Im Projektverzeichnis befindet sich eine `.env.example`-Datei.
-   - Erstelle eine Kopie dieser Datei und benenne sie in `.env` um.
-   - Passe die Werte in der `.env`-Datei an deine Entwicklungsumgebung an, z. B. die MongoDB-Verbindungsinformationen oder andere Konfigurationsoptionen.
+   - Im Backend Projektverzeichnis befindet sich eine `.env file.zip`-Datei.
+   - Diese Datei ist Passwortgeschützt und enthält die nötige `.env` Datei um die Anwendung starten zu können.
+   - Das Passwort kann bei uns angefragt werden.
 
 4. Starte die Entwicklungsserver:
    - Öffne zwei separate Terminalfenster oder -registerkarten.
    - Navigiere in einem Terminalfenster zum `backend`-Verzeichnis und führe den Befehl `npm start` aus, um den Backend-Server zu starten.
    - Navigiere im anderen Terminalfenster zum `frontend`-Verzeichnis und führe den Befehl `npm start` aus, um den Frontend-Entwicklungsserver zu starten.
-
-## Benötigte Abhängigkeiten mit Versionsnummer:
-
-### Frontend-Technologien und deren Installation:
-
-- @emotion/react (Version 11.10.8)
-- @emotion/styled (Version 11.10.8)
-  - Installation: `npm install @emotion/react@11.10.8 @emotion/styled@11.10.8`
-
-- @mui/icons-material (Version 5.11.16)
-- @mui/material (Version 5.12.2)
-  - Installation: `npm install @mui/icons-material@5.11.16 @mui/material@5.12.2`
-
-- @reduxjs/toolkit (Version 1.9.5)
-  - Installation: `npm install @reduxjs/toolkit@1.9.5`
-
-- @testing-library/jest-dom (Version 5.16.5)
-- @testing-library/react (Version 13.4.0)
-- @testing-library/user-event (Version 13.5.0)
-  - Installation: `npm install @testing-library/jest-dom@5.16.5 @testing-library/react@13.4.0 @testing-library/user-event@13.5.0`
-
-- jwt-decode (Version 3.1.2)
-  - Installation: `npm install jwt-decode@3.1.2`
-
-- react (Version 18.2.0)
-- react-dom (Version 18.2.0)
-- react-redux (Version 8.0.5)
-- react-router-dom (Version 6.10.0)
-  - Installation: `npm install react@18.2.0 react-dom@18.2.0 react-redux@8.0.5 react-router-dom@6.10.0`
-
-- react-beautiful-dnd (Version 13.1.1)
-  - Installation: `npm install react-beautiful-dnd@13.1.1`
-
-- react-scripts (Version 5.0.1)
-  - Installation: `npm install react-scripts@5.0.1`
-
-- react-toastify (Version 9.1.2)
-  - Installation: `npm install react-toastify@9.1.2`
-
-- web-vitals (Version 2.1.4)
-  - Installation: `npm install web-vitals@2.1.4`
-
-
-### Backend-Technologien und deren Installation:
-
-- bcryptjs (Version 2.4.3)
-  - Installation: `npm install bcryptjs@2.4.3`
-
-- body-parser (Version 1.20.2)
-  - Installation: `npm install body-parser@1.20.2`
-
-- config (Version 3.3.9)
-  - Installation: `npm install config@3.3.9`
-
-- cors (Version 2.8.5)
-  - Installation: `npm install cors@2.8.5`
-
-- express (Version 4.18.2)
-  - Installation: `npm install express@4.18.2`
-
-- jsonwebtoken (Version 9.0.0)
-  - Installation: `npm install jsonwebtoken@9.0.0`
-
-- mongoose (Version 7.0.4)
-  - Installation: `npm install mongoose@7.0.4`
-
-- nodemon (Version 2.0.22)
-  - Installation (Dev-Abhängigkeit): `npm install nodemon@2.0.22`
-
-
-Um die erforderlichen Frontend und Backend-Technologien zu installieren, führe die angegebenen Installationsschritte für jede Abhängigkeit aus. Verwende den Befehl `npm install <Paketname>@<Versionsnummer>` oder fasse mehrere Pakete zusammen, wie oben gezeigt.
-
 
 Nachdem du diese Schritte befolgt hast, sollte das Trivia-Spielprojekt lokal auf deiner Entwicklungsumgebung laufen.
 
@@ -218,24 +146,32 @@ Das Frontend des Triviosa-Spielprojekts verwendet verschiedene Bibliotheken und 
 
 Die Anwendung verwendet Redux Toolkit für das State-Management. Der zentrale Redux-Store enthält den globalen Anwendungsstatus, der von verschiedenen Komponenten gelesen und aktualisiert werden kann. Redux Actions werden verwendet, um Änderungen im Store auszulösen, während die Reducers die Aktionen behandeln und den aktualisierten Zustand zurückgeben. Selektoren werden verwendet, um bestimmte Teile des Zustands abzurufen und an die Komponenten weiterzugeben, die sie benötigen.
 
+
 # 4. Backend-Dokumentation <a name="backend-dokumentation"></a>
 
 ### Architekturübersicht des Backend-Codes
 
 Das Backend des Triviosa-Spielprojekts basiert auf dem Node.js-Framework und verwendet Express.js als Webframework. Hier ist eine Übersicht über die wichtigsten Ordner und Dateien in der Backend-Codebasis:
-# TODO ANFANG:
 - `server.js`: Die Hauptdatei, die den Express-Server initialisiert und konfiguriert.
 - `endpoints`: Dieser Ordner enthält die API-Endpunktdefinitionen und deren Routenbehandlung.
-- `controllers`: Enthält die Controller-Funktionen, die die Logik für die verschiedenen API-Endpunkte implementieren.
-- `models`: Hier befinden sich die Datenbankmodelle, die mit der MongoDB-Datenbank interagieren.
+- `endpoints/authentication`: Dieser Ordner enthält Dateien für die Authentifizierung von Benutzern.
+- `endpoints/game`: Dieser Ordner enthält Dateien für die Spiellogik.
+- `endpoints/user`: Dieser Ordner enthält Dateien für die Benutzerverwaltung.
+- `endpoints/utils`: Dieser Ordner enthält Hilfsdateien für die Authentifizierung und Autorisierung.
+- `endpoints/tests`: Dieser Ordner enthält Testdateien für verschiedene Endpunkte und Dienste.
+- `database`: Enthält die gesamte Logik zur Einrichtung der Datenbank und das Skript zum initialen befüllen der Datenbank.
+- `database/TriviaQuestions`: Dieser Ordner enthält Skripte und Datenmodelle für Trivia-Fragen.
+- `logs`: Dieser Ordner enthält Log-Dateien für das Projekt.
+- `config`: Dieser Ordner enthält Konfigurationsdateien für das Projekt.
+- `node_modules`: Dieser Ordner enthält alle externen Bibliotheken und Frameworks, die in dem Projekt verwendet werden.
 
 ### Beschreibung der Ordnerstruktur und der Hauptkomponenten
 
 Die Ordnerstruktur des Backends ist so organisiert, dass eine klare Trennung der Verantwortlichkeiten ermöglicht wird. Hier ist eine Beschreibung einiger Hauptordner und ihrer Funktionen:
 
-- `routes`: Enthält die API-Endpunktdefinitionen und deren Routenbehandlung.
-- `controllers`: Hier werden die Controller-Funktionen implementiert, die die Logik für die API-Endpunkte enthalten.
-- `models`: Enthält die Datenbankmodelle, die das Schema und die Interaktion mit der MongoDB-Datenbank definieren.
+- `database`: Enthält die gesamte Logik zur Einrichtung der Datenbank und das Skript zum initialen befüllen der Datenbank. Es enthält auch das `TriviaQuestions`-Unterverzeichnis, das Skripte und Datenmodelle für Trivia-Fragen enthält.
+- `endpoints`: Dieser Ordner enthält die API-Endpunktdefinitionen und deren Routenbehandlung. Es gibt Unterverzeichnisse für Authentifizierung (`authentication`), Spiellogik (`game`), Benutzerverwaltung (`user`), Hilfsfunktionen (`utils`) und Tests (`tests`).
+- `logs`: Dieser Ordner enthält Log-Dateien für das Projekt. Logs sind hilfreich für die Fehlersuche und die Überwachung des Systemzustands.
 
 ### Verwendete Bibliotheken und Frameworks
 
@@ -244,34 +180,62 @@ Das Backend des Trivia-Spielprojekts verwendet verschiedene Bibliotheken und Fra
 - Node.js: Eine JavaScript-Laufzeitumgebung, die serverseitiges JavaScript ermöglicht.
 - Express.js: Ein schnelles und flexibles Webframework für Node.js, das den Aufbau von APIs und die Behandlung von Routen vereinfacht.
 - MongoDB: Eine dokumentenorientierte NoSQL-Datenbank, die für die Speicherung von Spielinformationen und Benutzerdaten verwendet wird.
-
-### Dokumentation der API-Endpunkte
-
-Beschreibe die verschiedenen API-Endpunkte, die in der Anwendung verfügbar sind. Erläutere ihre Funktionen, die erwarteten Parameter, mögliche Antwortcodes und -formate. Verwende klare Beispiele und beschreibe den erwarteten Datenfluss zwischen Client und Server.
+- Mongoose: Eine MongoDB-Objektdatenmodellierung (ODM) Bibliothek. Sie wird verwendet, um Schemas und Modelle für die MongoDB-Datenbank zu erstellen.
+- Winston: Eine flexible Logging-Bibliothek für Node.js.
+- Jsonwebtoken: Eine Implementierung von JSON Web Tokens. Wird verwendet, um Authentifizierungstokens für Benutzer zu erstellen.
+- Bcrypt: Eine Bibliothek zur Hashierung von Passwörtern. Wird verwendet, um die Passwörter der Benutzer sicher zu speichern.
+- Dotenv: Eine Zero-Dependency-Modul, das `.env` Variablen lädt und `process.env` hinzufügt. Wird verwendet, um Konfigurationsvariablen aus der `.env`-Datei zu laden.
+- Nodemon: Ein Tool, das Node.js-Anwendungen durch Überwachen von Dateiänderungen in der Entwicklungsumgebung automatisch neu startet.
 
 ### Erläuterung der Datenbankmodelle und ihrer Beziehungen
 
-Beschreibe die Datenbankmodelle, die in der Anwendung verwendet werden, und erkläre ihre Struktur, Felder und Beziehungen. Verwende Diagramme oder Beispiele, um die Datenbankstruktur und ihre Zusammenhänge zu verdeutlichen.
+In dem Projekt gibt es mindestens zwei Mongoose-Datenbankmodelle:
 
-# TODO ENDE
-
+- `UserModel`: Dieses Modell repräsentiert einen Benutzer in der Datenbank. Es enthält folgende Felder:
+  - `userID`: Ein eindeutiger Benutzername.
+  - `email`: Die E-Mail-Adresse des Benutzers.
+  - `password`: Das Passwort des Benutzers. Dies wird vor dem Speichern gehasht.
+  - `isAdministrator`: Ein Boolescher Wert, der angibt, ob der Benutzer ein Administrator ist.
+  - `profilePicture`: Ein Bild des Benutzers.
+  - `isVerified`: Ein Boolescher Wert, der angibt, ob der Benutzer verifiziert ist.
+- `QuestionModel`: Dieses Modell repräsentiert eine Trivia-Frage in der Datenbank. Es enthält folgende Felder:
+  - `category`: Die Kategorie der Frage.
+  - `type`: Der Typ der Frage.
+  - `difficulty`: Der Schwierigkeitsgrad der Frage.
+  - `question`: Der Fragetext.
+  - `correct_answer`: Die richtige Antwort auf die Frage.
+  - `incorrect_answers`: Eine Liste mit falschen Antworten auf die Frage.
 # 5. Websockets (Socket.io) <a name="websockets"></a>
 
 ### Erklärung der Integration von Websockets mit Socket.io
 
 Socket.io ist eine Bibliothek, die Echtzeitkommunikation über Websockets ermöglicht. Es bietet eine einfache Möglichkeit, bidirektionale Verbindungen zwischen Client und Server herzustellen. Die Integration von Socket.io in das Triviosa-Spielprojekt ermöglicht eine Echtzeitkommunikation für Funktionen wie Live-Updates, Benachrichtigungen oder Chat-Funktionen.
 
-### TODO: Beschreibung der implementierten Ereignisse (Events) und ihrer Funktionalitäten
+### Beschreibung der implementierten Ereignisse (Events) und ihrer Funktionalitäten
 
 Im Trivia-Spielprojekt werden verschiedene Ereignisse (Events) über Websockets mit Socket.io implementiert. Hier sind einige Beispiele für implementierte Ereignisse und ihre Funktionalitäten:
 
-- `joinGame`: Dieses Ereignis wird ausgelöst, wenn ein Benutzer einem Spiel beitreten möchte. Es ermöglicht die Verbindung des Benutzers mit dem Spielraum und die Zuweisung einer eindeutigen Spiel- oder Benutzer-ID.
-- `startGame`: Dieses Ereignis wird ausgelöst, um das Spiel zu starten, nachdem alle Spieler bereit sind. Es sendet das Spielstartsignal an alle verbundenen Spieler.
-- `submitAnswer`: Dieses Ereignis wird ausgelöst, wenn ein Spieler seine Antwort auf eine gestellte Frage einreicht. Es übermittelt die Antwort an den Server zur Auswertung.
-- `updateScore`: Dieses Ereignis wird ausgelöst, um die Punktzahl eines Spielers zu aktualisieren und an alle verbundenen Spieler zu übertragen.
-- `endGame`: Dieses Ereignis wird ausgelöst, um das Spiel zu beenden und die Ergebnisse anzuzeigen.
+- `error`: Dieses Ereignis wird ausgelöst, wenn ein Fehler auftritt. Der Fehler wird in der Konsole protokolliert und spezielle Behandlungen werden für bestimmte Fehler durchgeführt.
+- `connected` und `disconnect`: Diese Ereignisse werden ausgelöst, wenn der Client eine Verbindung zum Server herstellt oder diese trennt.
+- `reconnect`: Dieses Ereignis wird ausgelöst, wenn der Client versucht, eine unterbrochene Verbindung zum Server wiederherzustellen.
+- `playerLeft`: Dieses Ereignis wird ausgelöst, wenn ein Spieler das Spiel verlässt. Es aktualisiert die Redux-Store-Daten entsprechend.
+- `updatedHost`: Dieses Ereignis wird ausgelöst, wenn ein neuer Host für das Spiel festgelegt wurde. Es aktualisiert die Redux-Store-Daten entsprechend.
+- `updatedRounds` und `updatedPlayerNumber`: Diese Ereignisse werden ausgelöst, wenn die Anzahl der Runden oder Spieler aktualisiert wurde. Sie aktualisieren die Redux-Store-Daten entsprechend.
+- `gameCreated` und `startedGame`: Diese Ereignisse werden ausgelöst, wenn ein neues Spiel erstellt oder gestartet wurde. Sie aktualisieren die Redux-Store-Daten und leiten den Benutzer zu den entsprechenden Seiten um.
+- `joinedLobby` und `playerJoined`: Diese Ereignisse werden ausgelöst, wenn ein Spieler einer Lobby beitritt. Sie aktualisieren die Redux-Store-Daten entsprechend.
+- `givenQuestion`: Dieses Ereignis wird ausgelöst, wenn eine Frage an den Spieler gesendet wird. Es aktualisiert die Redux-Store-Daten und leitet den Benutzer zur Quiz-Seite um.
+- `roundFinished`: Dieses Ereignis wird ausgelöst, wenn eine Runde beendet wurde. Es aktualisiert die Redux-Store-Daten und leitet den Benutzer zur Punktauswahl-Seite um.
+- `synchronizedLobby`: Dieses Ereignis wird ausgelöst, um den Zustand der Lobby zwischen den Spielern zu synchronisieren. Es aktualisiert die Redux-Store-Daten entsprechend.
 
-Diese sind nur einige Beispiele für Ereignisse, die in der Anwendung implementiert werden können. Passe sie entsprechend deinen Anforderungen an.
+Es sind auch mehrere Ereignisse implementiert, die vom Client an den Server gesendet werden:
+
+- `connect` und `disconnect`: Diese Methoden stellen eine Verbindung zum Server her oder trennen diese.
+- `createGame`: Diese Methode sendet ein Ereignis zum Server, um ein neues Spiel zu erstellen.
+- `joinLobby`: Diese Methode sendet ein Ereignis zum Server, um einer Spiellobby beizutreten.
+- `updateHost`, `setRounds` und `setPlayerNumber`: Diese Methoden senden Ereignisse zum Server, um den Host des Spiels, die Anzahl der Runden oder die Anzahl der Spieler zu aktualisieren.
+- `startGame`: Diese Methode sendet ein Ereignis zum Server, um ein Spiel zu starten.
+- `giveQuestion` und `setAnswer`: Diese Methoden senden Ereignisse zum Server, um eine Frage anzufordern oder eine Antwort zu setzen.
+- `lobbySynchro`: Diese Methode sendet ein Ereignis zum Server, um den Zustand der Lobby zu synchronisieren.
 
 ### Anleitungen zur Verwendung von Websockets im Frontend und Backend
 
@@ -290,19 +254,6 @@ Hier sind Anleitungen zur Verwendung von Websockets mit Socket.io im Frontend un
 - Initialisiere den Socket.io-Server und binde ihn an den Express.js-Server.
 - Registriere Ereignishandler für empfangene Ereignisse von den verbundenen Clients.
 - Sende Ereignisse an spezifische Clients oder an alle verbundenen Clients.
-
-Passe diese Anleitungen entsprechend deinem Projekt an und implementiere die erforderlichen Ereignisse und deren Logik.
-
-### Hinweise zur Skalierung und Leistungsoptimierung bei der Verwendung von Websockets
-
-Bei der Verwendung von Websockets und Socket.io ist es wichtig, die Skalierung und Leistung der Anwendung zu berücksichtigen. Hier sind einige Hinweise zur Skalierung und Leistungsoptimierung:
-
-- Implementiere Caching-Strategien, um häufig verwendete Daten zu puffern und die Anzahl der Datenbankzugriffe zu reduzieren.
-- Verwende asynchrone Operationen und optimiere Datenbankabfragen, um die Antwortzeit zu verbessern.
-- Implementiere eine horizontale Skalierung, indem du mehrere Instanzen des Servers bereitstellst und Load Balancing einsetzt.
-- Überwache und analysiere die Leistung der Websocket-Verbindungen, um Engpässe oder Probleme frühzeitig zu erkennen und zu beheben.
-
-Berücksichtige diese Hinweise bei der Entwicklung und Skalierung deiner Anwendung, um eine optimale Leistung und Stabilität zu gewährleisten.
 
 
 # 6. Fehlerbehandlung <a name="fehlerbehandlung"></a>
