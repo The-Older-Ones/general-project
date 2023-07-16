@@ -85,21 +85,15 @@ Um das Triviosa-Spielprojekt zu entwickeln und auszuführen, sind folgende Kompo
 
 - Node.js: Stellen Sie sicher, dass Node.js auf Ihrem System installiert ist. Sie können die neueste stabile Version von der offiziellen [Node.js-Website](https://nodejs.org/) herunterladen und installieren.
 
-#TODO WEITERE SCHRITTE ZUR INSTALLATION VON MONGODB ERFORDERLICH
-- MongoDB: Installieren Sie MongoDB auf Ihrem System, um die Datenbank für das Trivia-Spiel zu verwenden. Sie können MongoDB Community Edition von der offiziellen [MongoDB-Website](https://www.mongodb.com/) herunterladen und den Installationsanweisungen für Ihr Betriebssystem folgen.
-
-Falls es zu Versionproblemen kommen sollte, schauen Sie sich bitte die Sektion "Benötigte Abhängigkeiten mit Versionsnummer" an.
+- MongoDB: Installieren Sie MongoDB auf Ihrem System, um die Datenbank für das Spiel zu verwenden. Sie können MongoDB Community Edition von der offiziellen [MongoDB-Website](https://www.mongodb.com/) herunterladen und den Installationsanweisungen für Ihr Betriebssystem folgen.
 
 ### Installation und Konfiguration der Entwicklungsumgebung
 
-Folgen Sie den unten aufgeführten Schritten, um die Entwicklungsumgebung für das Trivia-Spielprojekt einzurichten:
+Folgen Sie den unten aufgeführten Schritten, um die Entwicklungsumgebung für das Spielprojekt einzurichten:
 
 1. Klone oder lade das Projekt herunter:
-   - Öffne ein Terminal oder eine Befehlszeile.
-   - Navigiere zum Zielverzeichnis, in dem du das Projekt speichern möchtest.
    - Verwende den Befehl `git clone <Repository-URL>`, um das Projekt zu klonen.
     - Hier muss darauf geachtet werden, jeweils das Repository fürs Frontend ("frontend-project") und fürs Backend ("backend-projet") zu klonen.
-   - Falls du das Projekt heruntergeladen hast, entpacke das heruntergeladene Archiv in das Zielverzeichnis.
 
 2. Installiere Abhängigkeiten:
    - Navigiere im Terminal oder in der Befehlszeile jeweils zum Verzeichnis des Backends und des Frontends.
