@@ -40,9 +40,6 @@
    - Liste der verwendeten Ressourcen, Tools und Bibliotheken mit Links und Kurzbeschreibungen
    - Verweise auf externe Dokumentationen oder Tutorials, die bei der Entwicklung des Projekts hilfreich waren
 
-8. [Beitragende und Kontaktdetails](#beitragende-und-kontaktdetails)
-   - Informationen über das Entwicklerteam, ihre Rollen und Kontaktdetails
-   - Anweisungen zur Zusammenarbeit oder zum Beitrag zum Projekt (falls relevant)
 
 
 # 1. Einführung <a name="einführung"></a>
