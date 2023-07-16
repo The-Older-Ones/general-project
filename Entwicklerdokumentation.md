@@ -205,7 +205,9 @@ In dem Projekt gibt es mindestens zwei Mongoose-Datenbankmodelle:
   - `question`: Der Fragetext.
   - `correct_answer`: Die richtige Antwort auf die Frage.
   - `incorrect_answers`: Eine Liste mit falschen Antworten auf die Frage.
-# 5. Websockets (Socket.io) <a name="websockets"></a>
+
+
+# 5. Websockets (Socket.io) <a name="websockets-socketio"></a>
 
 ### Erklärung der Integration von Websockets mit Socket.io
 
